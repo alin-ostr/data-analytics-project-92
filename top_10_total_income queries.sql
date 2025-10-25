@@ -1,6 +1,6 @@
 -- Определение десяти продавцов с наибольшей выручкой. 
 SELECT 
-  CONCAT(c.first_name, ' ', c.last_name) AS sellers,
+  CONCAT(c.first_name, ' ', c.last_name) AS seller,
   COUNT(s.sales_person_id) AS operations,
   FLOOR(SUM(s.quantity * p.price)) AS income
 FROM
