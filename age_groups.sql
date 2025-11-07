@@ -16,6 +16,7 @@ WITH age_group AS (
             ELSE '40+'
         END
 )
+
 SELECT
     age_category,
     age_count
