@@ -1,5 +1,4 @@
--- Подсчёт общего количества покупателей из таблицы customers
-SELECT
-  COUNT(customer_id) AS customers_count
+-- Подсчёт общего количества покупателей из таблицы customers.
+SELECT COUNT(customer_id) AS customers_count
 FROM
-  customers;
+    customers;
