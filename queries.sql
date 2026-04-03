@@ -44,15 +44,15 @@ total_avg AS (
 )
 
 SELECT
-    average_income,
-    CONCAT(first_name, ' ', last_name) AS seller
+    ea.average_income,
+    CONCAT(ea.first_name, ' ', ea.last_name) AS seller
 FROM
-    each_avg
-CROSS JOIN total_avg
+    each_avg AS ea
+CROSS JOIN total_avg AS ta
 WHERE
-    t_avg > average_income
+    ta.t_avg > ea.average_income
 ORDER BY
-    average_income ASC;
+    ea.average_income ASC;
 
 
 -- Формирование отчета о выручке продавцов по дням недели.
