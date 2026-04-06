@@ -27,7 +27,7 @@ each_avg AS (
     SELECT
         e.first_name,
         e.last_name,
-        FLOOR(SUM(s.quantity * p.price) / COUNT(*)) AS average_income
+        FLOOR(AVG(s.quantity * p.price)) AS average_income
     FROM
         employees AS e
     INNER JOIN sales AS s ON e.employee_id = s.sales_person_id
